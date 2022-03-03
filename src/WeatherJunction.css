@@ -1,0 +1,37 @@
+/* Text box outside */
+.weatherJunction .MuiFormControl-root {
+  margin-bottom: 7% !important;
+}
+
+/* Text box - inside the text */
+.weatherJunction .MuiInputLabel-root {
+  color: #444444 !important;
+  background-color: #ebf7ff75 !important;
+}
+
+/* Text color */
+.weatherJunction .MuiOutlinedInput-input {
+  color: #000000 !important;
+}
+
+/* Text box - outside the text */
+.weatherJunction .MuiOutlinedInput-root {
+  background-color: #f1f1f1 !important;
+  border-radius: 15px !important;
+}
+
+/* Login button specs */
+.weatherJunction .MuiButton-root {
+  line-height: 2.75 !important;
+  border-radius: 15px !important;
+  color: #ffffff !important;
+  /* background-color: #0f9fff !important; */
+  margin-bottom: 6% !important;
+}
+
+/* error message style edition */
+.weatherJunction .MuiFormHelperText-root {
+  color: #ff0000 !important;
+  font-size: small !important;
+  font-weight: lighter !important;
+}

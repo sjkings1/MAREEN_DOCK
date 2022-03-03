@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+// import axios from "axios";
 
 export const initialStateHandler ={
-    loading: false,
-    hasErrors: false,
+    loadingC: false,
+    hasErrorsC: false,
     currentWeather: []
 }
 
@@ -11,34 +11,34 @@ const currentWeatherSlice = createSlice({
     name: "currentWeather",
     initialState: initialStateHandler,
     reducers: {
-        getCurrentWeather: state => { state.loading = true },
+        getCurrentWeather: state => { state.loadingC = true },
         getCurrentWeatherSuccess: (state, { payload }) => { 
             state.currentWeather = payload
-            state.loading = false
-            state.hasErrors = false  
+            state.loadingC = false
+            state.hasErrorsC = false  
         },
         getCurrentWeatherFailure: state => {
-            state.loading = false
-            state.hasErrors = true
+            state.loadingC = false
+            state.hasErrorsC = true
         }
     }
 });
 
-export function fetchCurrentWeather() {
+// export function fetchCurrentWeather() {
 
-    return ( async dispatch => {
-      dispatch(getCurrentWeather())
+//     return ( async dispatch => {
+//       dispatch(getCurrentWeather())
   
-      try {
-        const currentSkyData = await axios.get('https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=9df3f65223f5d0da919ec90525134833')
-        // const currentWeatherData = currentSkyData
-  debugger
-        dispatch(getCurrentWeatherSuccess(currentSkyData.data))
-      } catch (error) {
-        dispatch(getCurrentWeatherFailure())
-      }
-    } )
-  }
+//       try {
+//         const currentSkyData = await axios.get('https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=9df3f65223f5d0da919ec90525134833')
+//         // const currentWeatherData = currentSkyData
+//   debugger
+//         dispatch(getCurrentWeatherSuccess(currentSkyData.data))
+//       } catch (error) {
+//         dispatch(getCurrentWeatherFailure())
+//       }
+//     } )
+//   }
 
 export const { getCurrentWeather, getCurrentWeatherSuccess, getCurrentWeatherFailure } = currentWeatherSlice.actions
 
