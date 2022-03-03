@@ -1,0 +1,51 @@
+/* container for Login box */
+.loginpage .MuiPaper-root {
+  padding: 2%;
+  height: 60vh;
+  width: 20vw !important;
+  margin: 3% auto;
+  border-radius: 5% !important;
+}
+
+/* Avatar profile pic */
+.loginpage .MuiAvatar-root {
+  background-color: #000000 !important;
+}
+
+/* Text box outside */
+.loginpage .MuiFormControl-root {
+  margin-bottom: 7% !important;
+}
+
+/* Text box - inside the text */
+.loginpage .MuiInputLabel-root {
+  color: #444444 !important;
+  background-color: #ebf7ff75 !important;
+}
+
+/* Text color */
+.loginpage .MuiOutlinedInput-input {
+  color: #000000 !important;
+}
+
+/* Text box - outside the text */
+.loginpage .MuiOutlinedInput-root {
+  background-color: #f1f1f1 !important;
+  border-radius: 15px !important;
+}
+
+/* Login button specs */
+.loginpage .MuiButton-root {
+  line-height: 2.75 !important;
+  border-radius: 15px !important;
+  color: #ffffff !important;
+  /* background-color: #0f9fff !important; */
+  margin-bottom: 6% !important;
+}
+
+/* error message style edition */
+.loginpage .MuiFormHelperText-root {
+  color: #ff0000 !important;
+  font-size: small !important;
+  font-weight: lighter !important;
+}

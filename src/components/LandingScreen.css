@@ -1,0 +1,48 @@
+.header {
+    background-color: #00ff9d;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 2px grey;
+  }
+  
+  .header p {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 15px;
+    border-radius: 4px;
+  }
+  
+  .header p.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #1900ff;
+  }
+  
+  .header p:hover {
+    background-color: #07004450;
+    color: #00f7ff;
+  }
+  
+  .header p.active {
+    background-color: #000000;
+    color: #ff8800;
+  }
+  
+  .header-right {
+    float: right;
+  }
+  
+  @media screen and (maxwidth: 500px) {
+    .header p {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  
+    .header-right {
+      float: none;
+    }
+  }

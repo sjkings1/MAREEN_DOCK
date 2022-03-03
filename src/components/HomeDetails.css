@@ -1,0 +1,12 @@
+h1, h3 {
+    text-align: center;
+}
+
+.weatherdirection .MuiButton-root {
+    line-height: 2.75 !important;
+    border-radius: 15px !important;
+    color: #ffca39 !important;
+    background-color: #222222 !important;
+    width: 35vw;
+    margin: 3% !important;
+  }

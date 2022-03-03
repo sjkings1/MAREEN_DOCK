@@ -1,0 +1,65 @@
+/* container for SignUp box */
+.signuppage .MuiPaper-root {
+  padding: 2%;
+  height: 80vh auto;
+  width: 30vw !important;
+  margin: 3% auto;
+  border-radius: 5% !important;
+}
+
+/* Avatar profile pic */
+.signuppage .MuiAvatar-root {
+  background-color: #000000 !important;
+}
+
+.signuppage h2 {
+  height: 1rem;
+}
+
+/* Text box outside */
+.signuppage .MuiFormControl-root {
+  margin-bottom: 3% !important;
+}
+
+/* Text box - inside the text */
+.signuppage .MuiInputLabel-root {
+  color: #444444 !important;
+  background-color: #ebf7ff75 !important;
+}
+
+/* Text color */
+.signuppage .MuiOutlinedInput-input {
+  color: #000000 !important;
+}
+
+/* Text box - outside the text */
+.signuppage .MuiOutlinedInput-root {
+  background-color: #f1f1f1 !important;
+  border-radius: 15px !important;
+}
+
+/* Container for SignUp button specs */
+.signuppage .signButt {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1vw !important;
+}
+
+/* SignUp button specs */
+.signuppage .MuiButton-root {
+  line-height: 2.75 !important;
+  border-radius: 15px !important;
+  color: #ffffff !important;
+  /* background-color: #0f9fff !important; */
+  margin-bottom: 5% !important;
+  width: 14vw !important;
+}
+
+/* error message style edition */
+.signuppage .MuiFormHelperText-root {
+  color: #ff0000 !important;
+  font-size: small !important;
+  font-weight: lighter !important;
+}
+
+

@@ -1,0 +1,88 @@
+.weatherPage_current {
+  background-color: #676767 !important;
+  color: #fff !important;
+}
+
+.weatherPage_current h1 {
+  font-size: 3rem;
+}
+
+.weatherPage_current h2 {
+  font-size: 2rem;
+  color: #dbfaff;
+}
+
+.weatherPage_current section {
+  text-align: center;
+}
+
+.weatherPage_current .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.weatherPage_current .tile {
+  text-align: center;
+  padding: 10px;
+}
+
+/* 1st card specs  */
+.weatherPage_current .MuiPaper-root {
+  margin-top: 2% !important;
+  margin-left: 35% !important;
+  background-color: #61b0ff !important;
+}
+
+/* country name */
+.weatherPage_current .country_name {
+  color: #000000;
+}
+
+/* cloud image main */
+.weatherPage_current .MuiCardMedia-root {
+  width: 25% !important;
+  height: 25% !important;
+  margin-left: 38% !important;
+}
+
+/* description */
+.weatherPage_current .description {
+color: #f0f8ff;
+}
+
+/* date */
+.weatherPage_current .date {
+  color:#f0f8ff;
+}
+
+.weatherPage_current .main_degree {
+  font-size: 4.5rem;
+  color:#f0f8ff;
+}
+
+.weatherPage_current .row1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.weatherPage_current .speed{
+  color:aliceblue;
+}
+.weatherPage_current .feels_like{
+  color:aliceblue;
+}
+
+.weatherPage_current .row2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.weatherPage_current .sunrise{
+  color:aliceblue;
+}
+.weatherPage_current .pressure{
+  color:aliceblue;
+}
+
+

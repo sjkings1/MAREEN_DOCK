@@ -1,0 +1,71 @@
+.weatherPage_forecast {
+  background-color: #676767 !important;
+  color: #fff !important;
+}
+
+.weatherPage_forecast .forecast_data {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+
+.weatherPage_forecast h1 {
+  font-size: 3rem !important;
+}
+
+.weatherPage_forecast section {
+  text-align: center !important;
+}
+
+/* 1st card specs  */
+.weatherPage_forecast .MuiPaper-root {
+  background-color: #61b0ff !important;
+  padding: 2% !important;
+  height: 80vh auto !important;
+  width: 40vw !important;
+  margin: 3% auto;
+  border-radius: 5% !important;
+}
+
+/* country name */
+.weatherPage_forecast .country_name {
+  color: #000000 !important;
+}
+
+/* next_7_days */
+.weatherPage_forecast .next_7_days {
+    color: #ffffff !important;
+}
+
+/* dateTempA */
+.weatherPage_forecast .components {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+}
+
+/* dateTempB */
+.weatherPage_forecast .compA {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* dateTempC */
+.weatherPage_forecast .compB {
+    display: flex !important;
+}
+
+/* dayDate */
+.weatherPage_forecast .dayDate{
+    color:aliceblue;
+}
+
+/* tempMax */
+.weatherPage_forecast .tempMax{
+    color:#f0f8ff;
+}
+
+/* tempMin */
+.weatherPage_forecast .tempMin{
+    color:#ffffff99;
+}
