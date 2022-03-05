@@ -25,6 +25,7 @@
     "react-input-mask": "^2.0.4",
     "react-number-format": "^4.9.1",
     "react-phone-number-input": "^3.1.46",
+    "react-places-autocomplete": "^7.3.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^5.3.0",
     "react-scripts": "5.0.0",
