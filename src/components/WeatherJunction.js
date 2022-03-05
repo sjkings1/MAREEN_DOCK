@@ -152,6 +152,7 @@ debugger
 
                         <p> LATITUDE: {coordinates.lat} </p>
                         <p> LONGITUDE: {coordinates.lng} </p>
+                        <p> ADDRESS: {address} </p>
 
 
                         <input {...getInputProps({ placeholder: "address type it" })} />
