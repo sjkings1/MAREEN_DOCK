@@ -13,7 +13,7 @@ import { getForecastWeather, getForecastWeatherSuccess, getForecastWeatherFailur
 import './WeatherPage_Current.css';
 import "./WeatherPage_Forecast.css";
 import "./WeatherJunction.css"
-import { displayWeekDay, displayDayDate, timestampToWeekDaysConversion, displayTime, timestampToHourConversion, KelvinToCelsius } from './DataConverter';
+import { displayWeekDay, displayDayDate, timestampToWeekDaysConversion, displayTime, timestampToHourConversion, KelvinToCelsius, KelvinToFahrenheit } from './DataConverter';
 
 import { Card, CardContent, CardMedia, Typography, CardActionArea, Divider, Paper, Grid, Avatar, TextField, Button } from '@mui/material';
 import AirIcon from '@mui/icons-material/Air';
@@ -28,6 +28,7 @@ import PlacesAutocomplete from 'react-places-autocomplete';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import UnstyledTabsCustomized from './HF_Tabs_Component';
 import SimpleMap from './GoogleMap';
+import LoadingButtonsTransition from './ToggleCelFaren';
 
 
 function WeatherJunction(props) {
@@ -41,6 +42,7 @@ function WeatherJunction(props) {
     const [address, setAddress] = useState("");
     const [coordinates, setCoordinates] = useState({ lat: null, lng: null });
     const [coordinatesForMap, setCoordinatesForMap] = useState({ lat: 25.276987, lng: 55.296249 });
+    const [toggleCelsiusFahrenheit, setToggleCelsiusFahrenheit] = useState(false);
 
     const handleSelect = async value => {
         const results = await geocodeByAddress(value);
@@ -91,7 +93,7 @@ function WeatherJunction(props) {
         return (async dispatch => {
             dispatch(getCurrentWeather())
             try {
-                const currentSkyData = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=9df3f65223f5d0da919ec90525134833`)
+                const currentSkyData = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=4cd569ffb3ecc3bffe9c0587ff02109f`)
                 debugger
                 dispatch(getCurrentWeatherSuccess(currentSkyData.data))
             } catch (error) {
@@ -105,7 +107,7 @@ function WeatherJunction(props) {
         return (async dispatch => {
             dispatch(getForecastWeather())
             try {
-                const currentSpaceData = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=9df3f65223f5d0da919ec90525134833`)
+                const currentSpaceData = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=4cd569ffb3ecc3bffe9c0587ff02109f`)
                 debugger
                 // currentSpaceData.data.hourly.forEach((e) => {
                 //     e.time = displayTime(e.dt);
@@ -190,9 +192,10 @@ function WeatherJunction(props) {
 
                                                 <div className='compB'>
 
-                                                    <h3 className='tempMin'> {KelvinToCelsius(e?.temp?.min)}° </h3>
+                                                    <h3 className='tempMin'> {toggleCelsiusFahrenheit ? KelvinToFahrenheit(e?.temp?.min) : KelvinToCelsius(e?.temp?.min)}° </h3>
+                                                    
 
-                                                    <h4 className='tempMax'> / {KelvinToCelsius(e?.temp?.max)}° </h4>
+                                                    <h4 className='tempMax'> / {toggleCelsiusFahrenheit ? KelvinToFahrenheit(e?.temp?.max) : KelvinToCelsius(e?.temp?.max)}° </h4>
 
                                                 </div>
 
@@ -244,7 +247,7 @@ function WeatherJunction(props) {
 
                                                 <div className='icon_degree'>
                                                     <img src={`http://openweathermap.org/img/wn/${e.weather[0].icon}@2x.png`} />
-                                                    <h2 className='degree'> {KelvinToCelsius(e.temp)}° </h2>
+                                                    <h2 className='degree'> {toggleCelsiusFahrenheit ? KelvinToFahrenheit(e.temp) : KelvinToCelsius(e.temp)}° </h2>
                                                 </div>
 
                                                 <h2 className='day'> {displayWeekDay(e.dt)} </h2>
@@ -289,6 +292,7 @@ function WeatherJunction(props) {
                                         }
                                     } fullWidth> GET WEATHER </Button>
                                     <Button variant="contained" onClick={refreshPage} fullWidth> REFRESH </Button>
+                                    <LoadingButtonsTransition toggleProp={setToggleCelsiusFahrenheit} currentStatusOfToggle={toggleCelsiusFahrenheit} />
                                 </Form>
                             )}
                         </Formik>
@@ -365,7 +369,7 @@ function WeatherJunction(props) {
 
                                     <Typography gutterBottom variant="h5" component="div"> <h5 className='date'>{displayWeekDay(currentWeather?.dt)} </h5> </Typography>
 
-                                    <Typography gutterBottom variant="h5" component="div"> <h5 className='main_degree'>{KelvinToCelsius(Math.ceil(Number(currentWeather?.main?.temp)))}{""}° </h5> </Typography>
+                                    <Typography gutterBottom variant="h5" component="div"> <h5 className='main_degree'>{toggleCelsiusFahrenheit ? KelvinToFahrenheit(currentWeather?.main?.temp) : KelvinToCelsius(currentWeather?.main?.temp)}° </h5> </Typography>
 
                                     <Divider />
 

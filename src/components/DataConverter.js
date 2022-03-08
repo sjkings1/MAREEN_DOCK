@@ -66,3 +66,7 @@ export const timestampToHourConversion = (parameter) => {
 export const KelvinToCelsius = (kelvin) => {
   return Math.floor(kelvin - 273.15);
 };
+
+export const KelvinToFahrenheit = (Fahrenheit) => {
+  return Math.floor((Fahrenheit - 273.15)* 9/5 + 32);
+};
