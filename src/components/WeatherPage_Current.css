@@ -1,6 +1,7 @@
 .weatherPage_current {
   background-color: #676767 !important;
   color: #fff !important;
+  padding: 2% !important;
 }
 
 .weatherPage_current h1 {
@@ -29,8 +30,8 @@
 
 /* 1st card specs  */
 .weatherPage_current .MuiPaper-root {
-  margin-top: 2% !important;
-  margin-left: 35% !important;
+  margin: 2% !important;
+  border-radius: 5% !important;
   background-color: #61b0ff !important;
 }
 
@@ -83,6 +84,11 @@ color: #f0f8ff;
 }
 .weatherPage_current .pressure{
   color:aliceblue;
+}
+
+.googleMapReact .MuiCardContent-root {
+width: 40vw !important;
+height: 75vh !important;
 }
 
 

@@ -1,49 +1,64 @@
+/* GET WEATHER CLICK */
+
 /* Text box outside */
 .getWeatherClick .MuiFormControl-root {
-    margin: 2% !important;
-    width: 15vw !important;
-  }
-  
-  /* Text box - inside the text */
-  .getWeatherClick .MuiInputLabel-root {
-    color: #444444 !important;
-    background-color: #ebf7ff75 !important;
-  }
-  
-  /* Text color */
-  .getWeatherClick .MuiOutlinedInput-input {
-    color: #000000 !important;
-  }
-  
-  /* Text box - outside the text */
-  .getWeatherClick .MuiOutlinedInput-root {
-    background-color: #f1f1f1 !important;
-    border-radius: 15px !important;
-  }
-  
-  /* Login button specs */
-  .getWeatherClick .MuiButton-root {
-    line-height: 3.10 !important;
-    border-radius: 15px !important;
-    color: #ffffff !important;
-    background-color: #0f9fff !important;
-    margin: 2% !important;
-    width: 10vw !important;
-  }
-  
-  /* error message style edition */
-  .getWeatherClick .MuiFormHelperText-root {
-    color: #ff0000 !important;
-    font-size: small !important;
-    font-weight: lighter !important;
-  }
+  margin: 2% !important;
+  width: 15vw !important;
+}
 
-  /* Text box - outside the text */
-  .googlePlace .MuiOutlinedInput-root {
-    background-color: #f1f1f1 !important;
-    border-radius: 15px !important;
-    width: 48vw !important;
-  }
+/* Text box - inside the text */
+.getWeatherClick .MuiInputLabel-root {
+  color: #444444 !important;
+  background-color: #ebf7ff75 !important;
+}
 
+/* Text color */
+.getWeatherClick .MuiOutlinedInput-input {
+  color: #000000 !important;
+}
 
+/* Text box - outside the text */
+.getWeatherClick .MuiOutlinedInput-root {
+  background-color: #f1f1f1 !important;
+  border-radius: 15px !important;
+}
 
+/* Login button specs */
+.getWeatherClick .MuiButton-root {
+  line-height: 3.1 !important;
+  border-radius: 15px !important;
+  color: #ffffff !important;
+  background-color: #0f9fff !important;
+  margin: 2% !important;
+  width: 10vw !important;
+}
+
+/* error message style edition
+.getWeatherClick .MuiFormHelperText-root {
+  color: #ff0000 !important;
+  font-size: small !important;
+  font-weight: lighter !important;
+} */
+
+/* GOOGLE PLACE */
+
+/* Text box - inside the text */
+.googlePlace .MuiFilledInput-root {
+  background-color: #c4e7ff !important;
+  width: 95vw !important;
+  color: #000000 !important;
+}
+
+/* Text box - inside the text */
+.googlePlace .MuiInputLabel-root {
+  color: #003f69 !important;
+  font-weight: bold !important;
+  background-color: #00000000 !important;
+}
+
+.uniteWeatherMap {
+display: flex !important;
+justify-content: space-around !important;
+align-items: center !important;
+
+}

@@ -34,38 +34,106 @@
 
 /* next_7_days */
 .weatherPage_forecast .next_7_days {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 /* dateTempA */
 .weatherPage_forecast .components {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: flex-end !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
 }
 
 /* dateTempB */
 .weatherPage_forecast .compA {
-    display: flex !important;
-    align-items: center !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 /* dateTempC */
 .weatherPage_forecast .compB {
-    display: flex !important;
+  display: flex !important;
+  align-items: baseline !important;
+  height: 9vh !important;
+  width: 7vw !important;
 }
 
 /* dayDate */
-.weatherPage_forecast .dayDate{
-    color:aliceblue;
+.weatherPage_forecast .dayDate {
+  color: aliceblue;
 }
 
 /* tempMax */
-.weatherPage_forecast .tempMax{
-    color:#f0f8ff;
+.weatherPage_forecast .tempMax {
+  color: #ffffff99;
 }
 
 /* tempMin */
-.weatherPage_forecast .tempMin{
-    color:#ffffff99;
+.weatherPage_forecast .tempMin {
+  color: #f0f8ff;
+}
+
+/* 24 HOURS FORECAST WEATHER */
+
+.weatherPage_forecast_hourly {
+  background-color: #676767 !important;
+  color: #fff !important;
+}
+
+.weatherPage_forecast_hourly .MuiCardContent-root {
+  background-color: #2e4862;
+}
+
+.weatherPage_forecast_hourly .MuiTypography-root {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-evenly !important;
+  margin: 0% !important;
+  padding: 1% !important;
+}
+
+.weatherPage_forecast_hourly .components {
+  display: flex !important;
+  justify-content: space-evenly !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  /* background-color: #61b0ff !important; */
+  width: 19vw !important;
+  height: 40vh !important;
+  padding: 1.5% !important;
+}
+
+.weatherPage_forecast_hourly .time {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 16vw !important;
+  height: 10vh !important;
+  background-color: #dddddd !important;
+}
+
+.weatherPage_forecast_hourly .icon_degree {
+  display: flex !important;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+  width: 16vw !important;
+  height: 10vh !important;
+  background-color: #00ffff !important;
+}
+
+.weatherPage_forecast_hourly .degree {
+  display: flex !important;
+  align-content: flex-end !important;
+  align-items: center !important;
+  height: 5vh !important;
+}
+
+.weatherPage_forecast_hourly .day {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 8px !important;
+  width: 16vw !important;
+  height: 10vh !important;
+  background-color: #dddddd !important;
 }
