@@ -192,10 +192,10 @@ function WeatherJunction(props) {
 
                                                 <div className='compB'>
 
-                                                    <h3 className='tempMin'> {toggleCelsiusFahrenheit ? KelvinToFahrenheit(e?.temp?.min) : KelvinToCelsius(e?.temp?.min)}° </h3>
+                                                    <h3 className='tempMin'> {toggleCelsiusFahrenheit ? KelvinToFahrenheit(e?.temp?.min) : KelvinToCelsius(e?.temp?.min)}{toggleCelsiusFahrenheit ? "°F" : "°C"} </h3>
                                                     
 
-                                                    <h4 className='tempMax'> / {toggleCelsiusFahrenheit ? KelvinToFahrenheit(e?.temp?.max) : KelvinToCelsius(e?.temp?.max)}° </h4>
+                                                    <h4 className='tempMax'> {"/"}{toggleCelsiusFahrenheit ? KelvinToFahrenheit(e?.temp?.max) : KelvinToCelsius(e?.temp?.max)}{toggleCelsiusFahrenheit ? "°F" : "°C"} </h4>
 
                                                 </div>
 
@@ -247,7 +247,7 @@ function WeatherJunction(props) {
 
                                                 <div className='icon_degree'>
                                                     <img src={`http://openweathermap.org/img/wn/${e.weather[0].icon}@2x.png`} />
-                                                    <h2 className='degree'> {toggleCelsiusFahrenheit ? KelvinToFahrenheit(e.temp) : KelvinToCelsius(e.temp)}° </h2>
+                                                    <h2 className='degree'> {toggleCelsiusFahrenheit ? KelvinToFahrenheit(e.temp) : KelvinToCelsius(e.temp)}{toggleCelsiusFahrenheit ? "°F" : "°C"} </h2>
                                                 </div>
 
                                                 <h2 className='day'> {displayWeekDay(e.dt)} </h2>
@@ -369,7 +369,7 @@ function WeatherJunction(props) {
 
                                     <Typography gutterBottom variant="h5" component="div"> <h5 className='date'>{displayWeekDay(currentWeather?.dt)} </h5> </Typography>
 
-                                    <Typography gutterBottom variant="h5" component="div"> <h5 className='main_degree'>{toggleCelsiusFahrenheit ? KelvinToFahrenheit(currentWeather?.main?.temp) : KelvinToCelsius(currentWeather?.main?.temp)}° </h5> </Typography>
+                                    <Typography gutterBottom variant="h5" component="div"> <h5 className='main_degree'>{toggleCelsiusFahrenheit ? KelvinToFahrenheit(currentWeather?.main?.temp) : KelvinToCelsius(currentWeather?.main?.temp)}{toggleCelsiusFahrenheit ? "°F" : "°C"} </h5> </Typography>
 
                                     <Divider />
 
