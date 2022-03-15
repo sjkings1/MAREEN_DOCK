@@ -29,6 +29,7 @@ import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import UnstyledTabsCustomized from './HF_Tabs_Component';
 import SimpleMap from './GoogleMap';
 import LoadingButtonsTransition from './ToggleCelFaren';
+import MapsGoogleNew from './MapsGoogleNew';
 
 
 function WeatherJunction(props) {
@@ -93,7 +94,7 @@ function WeatherJunction(props) {
         return (async dispatch => {
             dispatch(getCurrentWeather())
             try {
-                const currentSkyData = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=4cd569ffb3ecc3bffe9c0587ff02109f`)
+                const currentSkyData = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=9df3f65223f5d0da919ec90525134833`)
                 debugger
                 dispatch(getCurrentWeatherSuccess(currentSkyData.data))
             } catch (error) {
@@ -107,7 +108,7 @@ function WeatherJunction(props) {
         return (async dispatch => {
             dispatch(getForecastWeather())
             try {
-                const currentSpaceData = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=4cd569ffb3ecc3bffe9c0587ff02109f`)
+                const currentSpaceData = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=9df3f65223f5d0da919ec90525134833`)
                 debugger
                 // currentSpaceData.data.hourly.forEach((e) => {
                 //     e.time = displayTime(e.dt);
@@ -422,6 +423,8 @@ function WeatherJunction(props) {
             </div >
 
             <UnstyledTabsCustomized hidingForecastHourlyWeatherComponent={renderingUIForecast_HourlyWeather()} hidingForecastWeatherComponent={renderingUIForecastWeather()} />
+
+            {/* <MapsGoogleNew /> */}
 
         </div >
 

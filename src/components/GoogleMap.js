@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
+// import Marker from 'google-map-react';
 import Marker from './Marker';
-import { Popover, Button } from 'antd';
 
-const content = (
-    <div>
-        <p>Content</p>
-        <p>Content</p>
-    </div>
-);
+// const content = (
+//     <div>
+//         <p>Content</p>
+//         <p>Content</p>
+//     </div>
+// );
 
 
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
@@ -30,19 +30,6 @@ function SimpleMap(props) {
     const [center, setCenter] = useState({ lat: null, lng: null });
 
     const [zoom, setZoom] = useState(11);
-    //   static defaultProps = {
-    //     center: {
-    //       lat: 59.95,
-    //       lng: 30.33
-    //     },
-    //     zoom: 11
-    //   };
-    // let center = {
-    //     lat: 59.95,
-    //     lng: 30.33
-    // }
-
-    // let zoom = 11
 
     useEffect(() => {
         debugger
@@ -60,20 +47,14 @@ function SimpleMap(props) {
                 options={getMapOptions}
             >
 
-                {/* <Popover content={content} title="Title"> */}
 
                 <Marker
-                    tooltip={"ff"}
                     lat={center.lat}
                     lng={center.lng}
                     // text="GPS"
                     color="red"
                 />
-                {/* <InfoWindow>
-                    <h4>Hi</h4>
-                </InfoWindow> */}
 
-                {/* </Popover> */}
             </GoogleMapReact>
         </div>
     );
